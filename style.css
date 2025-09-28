@@ -1,0 +1,282 @@
+/* ----------------------
+   RESET & BASE STYLES
+----------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+
+  /* Layered background images */
+  background: url("images/pattern-squiggly-line-bottom-desktop.svg") bottom left
+      no-repeat,
+    url("images/pattern-squiggly-line-top.svg") top right no-repeat,
+    url("images/pattern-circle.svg") 70% 50% no-repeat,
+    url("images/pattern-lines.svg") center/cover no-repeat,
+    url("images/background-desktop.png") center/cover no-repeat;
+  background-color: #0a0018; /* fallback */
+  background-attachment: fixed;
+}
+
+/* FORM CONTAINER */
+.container {
+  max-width: 500px;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 16px;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 40px;
+}
+
+.logo-full {
+  max-width: 150px;
+}
+
+/* TEXT STYLES */
+
+h2 {
+  color: white;
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+h3 {
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  font-weight: normal;
+}
+
+/* ----------------------
+   FORM ELEMENTS
+----------------------- */
+.form-wrapper {
+  margin-top: 1rem;
+}
+
+#formErrors {
+  color: #ff7070;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.upload-box {
+  border: 2px dashed #aaa;
+  border-radius: 8px;
+  padding: 20px;
+  cursor: pointer;
+  text-align: center;
+  background-image: url("./images/icon-upload.svg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  transition: border-color 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  height: 100px;
+  margin-top: 10px;
+}
+
+.upload-box:hover {
+  border-color: #fff;
+}
+
+.inputs {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.inputs label {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: #ddd;
+}
+
+.inputs input {
+  padding: 0.8rem;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.inputs input::placeholder {
+  color: #aaa;
+}
+
+/* ----------------------
+   BUTTON
+----------------------- */
+button {
+  width: 100%;
+  padding: 1rem;
+  background: #ff6b4a;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #e05236;
+}
+.hidden {
+  display: none !important;
+}
+.hidden {
+  display: none;
+}
+
+#ticketCongrats {
+  text-align: center;
+  margin: 20px auto;
+  color: white;
+}
+
+#ticketCongrats h2 {
+  font-size: 22px;
+}
+
+#ticketCongrats span {
+  color: #ff5a5f;
+  font-weight: bold;
+}
+
+/* ----------------------
+   TICKET (HIDDEN INITIALLY)
+----------------------- */
+#ticket {
+  display: none;
+  margin-top: 2rem;
+  padding: 2rem;
+  background: rgba(0, 255, 100, 0.15);
+  border-radius: 12px;
+  text-align: center;
+  color: #fff;
+  font-size: 1.2rem;
+}
+/* Ticket container */
+.ticket {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background: linear-gradient(135deg, #2b1055, #7597de); */
+  background: url("images/pattern-ticket.svg") no-repeat center;
+  background-size: cover; /* ensures image scales nicely */
+  color: white;
+  border-radius: 20px;
+  padding: 1.5rem;
+  margin: 2rem auto;
+  width: 420px;
+  max-width: 95%;
+  position: relative;
+  font-family: "Arial", sans-serif;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Left side */
+.ticket-left {
+  flex: 3;
+}
+
+/* Right side (ticket code area) */
+.ticket-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: 2px dashed rgba(255, 255, 255, 0.4);
+  padding-left: 1rem;
+}
+
+/* Event info */
+.event-info h3 {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.event-info p {
+  margin: 0.2rem 0 0;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+/* User info block */
+.user-info {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.user-info img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 1rem;
+  object-fit: cover;
+}
+
+.user-info h4 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.user-info p {
+  margin: 0;
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+
+/* Ticket code */
+#ticketCode {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-weight: bold;
+  opacity: 0.85;
+  letter-spacing: 2px;
+}
+
+/* Hide until generated */
+.hidden {
+  display: none;
+}
+
+/* ----------------------
+   RESPONSIVENESS
+----------------------- */
+@media (max-width: 600px) {
+  .container {
+    padding: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  button {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+}

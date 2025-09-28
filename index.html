@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Generator.</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="formSection">
+   <div class="container">
+    <div class="header">
+        <img src="images/logo-full.svg" alt="" class="logo-full">
+
+    </div>
+    
+        <h2>  Your Journey to Coding Conf </br>2025 Starts Here!
+
+</h2>
+
+
+        <h3>  Secure your spot at next year's biggest coding conference.
+</h3>
+    
+    <div id="form" class="form-wrapper">
+    <form action="">
+        <div id="formErrors" role="alert" aria-live="polite"></div>
+         <div>
+        <span>Upload Avatar</span>
+             <div class="upload-box">
+         <label for="avatar" class="upload-label">
+         <p>Drag and drop or click to upload</p>
+         <input type="file" id="avatar" name="file" hidden>
+          </label>
+               </div>
+         </div>
+
+        <div class="inputs">
+        <label for="fullName">Full Name</label>
+        <input type="text" id="fullName" placeholder="Your name" required>
+         </div>
+        <div class="inputs">
+          <label for="email">Email address</label>
+        <input type="email" placeholder="Your email"  id="email" required>
+         </div>
+        <div class="inputs">
+         <label for="github">Github username</label>
+         <input type="text" placeholder="Your username" id="github" required>
+          </div>
+        <button id='submit_button' type="submit">Generate My Ticket</button>
+    </form>
+    </div>
+</div>
+</div>
+<!-- <div id="ticket" >
+    <h1>Congrats</h1>
+</div> -->
+<section>
+<div id="ticketCongrats" class="hidden">
+  <h2>
+    Congrats, <span id="ticketNameHighlight"></span>!  
+    Your ticket is ready.
+  </h2>
+  <p>
+    We’ve emailed your ticket to  
+    <span id="ticketEmailHighlight"></span> and will send updates in the run up to the event.
+  </p>
+</div>
+
+<div id="ticketOutput" class="ticket hidden">
+  <div class="ticket-left">
+    <div class="event-info">
+      <h3 id="outEvent">Coding Conf</h3>
+      <p><span id="outDate">Jan 31, 2025</span> | <span id="outLocation">Austin, TX</span></p>
+    </div>
+    <div class="user-info">
+      <img id="outAvatar" src="" alt="User Avatar" />
+      <div>
+        <h4 id="outName">Full Name</h4>
+        <p id="outHandle">@username</p>
+        <p id="outEmail">email@example.com</p>
+      </div>
+    </div>
+  </div>
+  <div class="ticket-right">
+    <p id="ticketCode">ID-0000</p>
+  </div>
+</div>
+</section>
+
+<script src="main.js"></script>    
+</body>
+</html>
