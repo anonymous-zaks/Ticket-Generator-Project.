@@ -20,7 +20,7 @@ body {
   background: url("images/pattern-squiggly-line-bottom-desktop.svg") bottom left
       no-repeat,
     url("images/pattern-squiggly-line-top.svg") top right no-repeat,
-    url("images/pattern-circle.svg") 75% 50% no-repeat,
+    url("images/pattern-circle.svg") 75% 60% no-repeat,
     url("images/pattern-lines.svg") center/cover no-repeat,
     url("images/background-desktop.png") center/cover no-repeat;
   background-color: #0a0018; /* fallback */
@@ -280,4 +280,5 @@ button:hover {
     font-size: 0.9rem;
   }
 }
+
 
